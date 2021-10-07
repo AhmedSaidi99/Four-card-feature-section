@@ -27,7 +27,7 @@ main {
     margin: 0 auto;
     width: 75vw;
 }
-@media (max-width: 375px) {
+@media (max-width: 767px) {
     main {
         margin: 100px auto;
         width: 80vw;
@@ -58,7 +58,7 @@ header p {
     margin: 10px 0 45px;
     line-height: 1.7;
 }
-@media (max-width: 375px)  {
+@media (max-width: 767px)  {
     header h1,
     header h2 {
         font-size: 24px;
@@ -71,10 +71,10 @@ header p {
 section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
+    grid-gap: 20px;
     align-items: center;
 }
-@media (max-width: 375px) {
+@media (max-width: 767px) {
     section {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
@@ -88,31 +88,38 @@ section .col {
 }
 section .col .card {
     width: 23vw;
-    height: 29vh;
+    height: fit-content;
     padding: 20px;
     box-shadow: 0px 13px 20px -5px hsl(234deg 12% 34% / 20%);
+    display: flex;
+    flex-direction: column;
 }
-@media (max-width: 375px) {
+@media (max-width: 767px) {
     section .col .card {
         width: 100%;
         height: 28vh;
     }
 }
+@media (min-width: 1400px) {
+    section .col .card {
+        height: 26vh;
+    }
+}
 section .col:nth-child(1) .card {
-    border-top: 3px solid var(--Border-Cyan);    
+    border-top: 4px solid var(--Border-Cyan);    
 }
 section .col:nth-child(2) .card:nth-child(1) {
-    border-top: 3px solid var(--Border-Red);
+    border-top: 4px solid var(--Border-Red);
     margin-bottom: 30px;
 }
 section .col:nth-child(2) .card:nth-child(2) {
-    border-top: 3px solid var(--Border-Orange);    
+    border-top: 4px solid var(--Border-Orange);    
 }
 section .col:nth-child(3) .card {
-    border-top: 3px solid var(--Border-Blue);    
+    border-top: 4px solid var(--Border-Blue);    
 }
 section .card h1 {
-    font-size: 20px;
+    font-size: 19px;
     margin: 0 0 10px;
     color: var(--Heading-Color);
 }
@@ -126,5 +133,5 @@ section .card .image {
     align-items: flex-end;
 }
 section .card .image img {
-    width: 50px;
+    width: 65px;
 }
