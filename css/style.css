@@ -4,6 +4,7 @@
     --Border-Cyan: hsl(180, 62%, 55%);
     --Border-Orange: hsl(34, 97%, 64%);
     --Border-Blue: hsl(212, 86%, 64%);
+    --Heading-Color: hsl(234, 12%, 34%);
 }
 /* End Variables */
 * {
@@ -44,11 +45,13 @@ header h1 {
     margin: 0;
     font-weight: 200;
     font-size: 34px;
+    color: var(--Heading-Color);
 }
 header h2 {
     margin: 0;
     font-weight: 600;
     font-size: 34px;
+    color: var(--Heading-Color);
 }
 header p {
     width: 45%;
@@ -85,7 +88,7 @@ section .col {
 }
 section .col .card {
     width: 23vw;
-    height: 30vh;
+    height: 29vh;
     padding: 20px;
     box-shadow: 0px 13px 20px -5px hsl(234deg 12% 34% / 20%);
 }
@@ -109,7 +112,9 @@ section .col:nth-child(3) .card {
     border-top: 3px solid var(--Border-Blue);    
 }
 section .card h1 {
+    font-size: 20px;
     margin: 0 0 10px;
+    color: var(--Heading-Color);
 }
 section .card p {
     margin: 0 0 20px;
